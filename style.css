@@ -1,7 +1,32 @@
 /* SEE CLSCHEMA.CLR FOR COLORS */
 html {
-	font-family: Arial;
-	color: black ;
+	font-family: 'Open Sans', san-serif;
+	color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 20px;
+}
+
+p {
+	line-height: 24px;
+	font-size: 16px;
+}
+
+::-webkit-scrollbar {
+	width: 16px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #4e4e4e;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #777777;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #999999;
 }
 
 body {
@@ -10,174 +35,587 @@ body {
 	padding: 0 auto;
 }
 
+.body {
+	background-color: #eeeeee;
+	width: 100%;
+	height: auto;
+	margin: 50px auto 0 auto;
+}
+
 a {
 	text-decoration: none;
 }
 
-a:hover {
-	color: lightgray;
-}
-
-.containerLight a {
-	color: #141D2E;
-}
-
-p,h1,h2,h3,h4,h5,h6 {
-	padding: 0 20px;
-	margin: 0px;
-}
-	
-.containerDark a {
-	color: #92ABD8;
-}
-
-.containerLight {
-	background-color: #FFFFFF;
-	width: 100%;
-	padding: 0 auto;
-	margin: 0 auto;
+.menu {
+	z-index: 99;
+	width: 200px;
 	height: auto;
-	min-height: 100px;
-	border-bottom: 1px solid #2A4474;
+	position: fixed;
+	top: 50px;
+	right: 0;
+	background-color: #4e4e4e;
+	border-left: 1px solid #aaaaaa;
+	border-right: 1px solid #aaaaaa;
+	border-bottom: 1px solid #aaaaaa;
 }
 
-.containerLight p,.containerLight h1,.containerLight h2,.containerLight h3,.containerLight h4,.containerLight h5,.containerLight h6 {
-	padding: 10px;
-	margin: 0;
-}
-
-.containerDark {
-	background-color: #141D2E;
-	width: 100%;
-	padding: 15px 0;
-	margin: 0 auto;
-	height: auto;
-	min-height: 50px;
-}
-
-.containerDark a:hover {
-	color: #C1C1C1;
-}
-
-.containerDark p,.containerDark h1,.containerDark h2,.containerDark h3,.containerDark h4,.containerDark h5,.containerDark h6 {
-	color: #92ABD8;
-	padding: 10px;
-	margin: 0;
-}
-
-.innerContainer {
-	width: 60%;
-	margin: 0 auto;
-	padding: 10px;
-}
-
-.imageContainerLeft {
+.menu a {
 	display: block;
-	width: 400px;
-	height: auto;
-	padding: 10px;
-	margin: 0 auto;
-	background-color: #FFFFFF;
-	box-shadow: 4px 6px 15px black;
-}
-
-.imageContainerRight {
-	display: block;
-	max-width: 400px;
-	max-height: 400px;
-	padding: 10px;
-	margin: 0 auto;
-	border: none;
-}
-
-.header {
-	color: lightgray;
-	background-color: #141D2E;
 	width: 100%;
-	height: 200px;
+	line-height: 40px;
+	text-align: center;
+	border-top: 1px solid #aaaaaa;
+	color: #eeeeee;
+	font-size: 14px;
+}
+
+.menu a:hover {
+	background-color: #7e7e7e;
+}
+
+.banner {
+	position: fixed;
+	top: 0;
+	color: #aaaaaa;
+	width: 100%;
+	height: 50px;
+	background-color: #4e4e4e;
+	border-bottom: 1px solid #aaaaaa;
+}
+
+.inline {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.search {
+	margin: 0;
+	padding: 0 15px;
+	width: 20%;
+	line-height: 50px;
+	text-align: center;
+}
+
+.search form input {
+	background-color: #eeeeee;
+	color: #4e4e4e;
+	padding: 4px;
+	width: 100%;
+	text-align: center;
+	border: 2px solid #aaaaaa;
 }
 
 .nav {
-	background-color: #2A4474;
-	border-bottom: 2px solid #141D2E;
-	height: 50px;
-	width: 100%;
+	width: 40%;
+	padding: 0 15px;
+	line-height: 50px;
+	
 }
 
 .nav a {
-	background-color: #2A4474;
-	color: #92ABD8;
+	color: #eeeeee;
+	font-size: 15px;
 	display: inline-block;
+	width: 19%;
+	min-width: 80px;
+	padding: 0;
+	margin: 0;
 	line-height: 50px;
-	width: 150px;
 	text-align: center;
 	text-decoration: none;
-	transition: 100ms;
-	margin: 0 auto;
-	padding: 0;
 }
 
 .nav a:hover {
-	background-color: #4670BD;
-	color: white;
-	transition: 100ms;
+	background-color: #444444;
+	color: #92ABD8;
 }
 
-.center {
+.mylogin {
+	float: right;
+	height: 50px;
+}
+
+.mylogin a {
+	width: auto;
+	padding: 0 15px;
+	color: #eeeeee;
+	display: block;
+	line-height: 50px;
+	min-width: 100px;
 	text-align: center;
 }
 
-.right {
-	text-align: right;
+.mylogin a:hover {
+	background-color: #444444;
+	color: #92ABD8;
 }
 
-.column {
-	display: inline-block;
-	vertical-align: middle;
-	width: 49.5%;
+.border {
+	width: 2px;
+	background-color: #aaaaaa;
+	height: 40px;
+	line-height: 50px;
+}
+
+.home_link {
+	font-size: 24px;
+	font-weight: bold;
+	color: #eeeeee;
+	text-decoration: none;
+	line-height: 50px;
+	width: 70px;
+	text-align: center;
+}
+
+.link {
+	color: white;
+}
+
+.link:hover {
+	color: #92ABD8 !important;
+}
+
+
+.header {
+	display: block;
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	color: black;
+}
+
+.container {
+	width: 70%;
+	margin: auto;
 	height: auto;
 }
 
 .blue {
-	color: #AAAAAA;
-	background-color: #111111;
-	min-height: 400px;
-	box-shadow: 4px 6px 15px black;
-	width:	450px;
+	background-color: #92ABD8;
+}
+
+.footer {
+	width: 100%;
+	height: auto;
+	padding-bottom: 10px;
+	text-align: center;
+	background-color: #4e4e4e;
+	color: #dddddd;
+}
+
+.footnav {
+	width: 125px;
+}
+
+.footer p {
+	padding: 0;
+	margin: 0;
+	line-height: 20px;
+	text-align: center;
+}
+
+.footnav a {
+	display: block;
+	width: 125px;
+	line-height: 20px;
+	font-size: 13px;
+	color: #eeeeee;
+}
+
+.footnav a:hover {
+	color: #92ABD8;
+}
+
+.head-img {
+	padding: 10px;
+}
+
+.foot-img {
+	height: 70px;
+	width: auto;
+	padding: 10px;
+}
+
+.lang {
+	display: inline-block;
+	width: 48px;
+	height: 32px;
+	filter: grayscale(75%);
+}
+
+.languages {
+	width: auto;
+	height: 40px;
+	text-align: center;
+	padding: 10px;
+}
+
+.lang:hover {
+	filter: none;
+}
+
+.selected {
+	filter: none;
+}
+
+.pagename {
+	margin: 20px;
+	font-size: 35px;
+	
+}
+
+.ad-box {
+	display: block;
+	position: relative;
+	width: auto;
+	height: auto;
+	min-height: 200px;
+	z-index: 3;
+}
+
+.price_header {
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	border: 1px solid black;
+	font-size: 20px;
+}
+
+.price_table {
+	border-collapse: collapse;
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.price_table tr {
+	padding: 0;
+	margin: 0 auto;
+}
+
+.no_border {
+	border: none !important;
+}
+
+.price_table tr td {
+	border: 1px solid black;
+	padding: 0;
+	margin: 0;
+	height: 50px;
+	max-width: 150px;
+	text-align: center;
+	vertical-align: middle;
+	width: auto;
+}
+
+.price_table tr#tableItem:hover td {
+	background-color: #ccccd8;
+}
+
+.price_table tr:first-child, .price_table tr td:first-child {
+	font-weight: bold;
+}
+.user_price_table {
+	border-collapse: collapse;
+	width: auto;
+	height: auto;
+	min-height: 350px;
+	margin: 10px auto;
+	min-width: 60%;
+}
+
+.user_price_table tr {
+	padding: 0;
+	margin: 0 auto;
+}
+
+.user_price_table tr td {
+	border-bottom: 1px solid #aaaaaa;
+	border-top: 1px solid #aaaaaa;
+	padding: 0;
+	margin: 0;
+	height: 50px;
+	max-width: 150px;
+	text-align: center;
+	vertical-align: middle;
+	width: auto;
+}
+
+#free {
+	background-color: #E6E6E6;
+}
+
+#adv {
+	background-color: #A8D08D;
+}
+
+#advplus {
+	background-color: #9CC2E5;
+}
+
+#unlim {
+	background-color: #FFD966;
+}
+
+.webb {
+	background-color: #7e7e7e;
+	color: #eeeeee;
+	width: 100px;
+	height: 30px;
+	border: 2px solid #4e4e4e;
+}
+
+.webb:hover {
+	background-color: #4e4e4e;
+	color: #efefef;
+}
+
+.webb-light {
+	background-color: #7e7e7e;
+	color: #eeeeee;
+	width: 100px;
+	height: 30px;
+	border: 2px solid #aaaaaa;
+}
+
+.webb-light:hover {
+	background-color: #aaaaaa;
+	color: #efefef;
+}
+.column {
+	display: inline-block;
+	width: 48%;
+	height: auto;
+	min-height: 100px;
+	margin: 0 auto;
+}
+
+.daulColumn {
+	width: 90%;
+	height: auto;
+	padding: 20px 0;
+	margin: 0 auto;
+}
+
+.usr_price {
+	display: block;
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	background-color: #4e4e4e;
+	color: #eeeeee;
+	text-align: center;
+	min-height: 150px;
+	border: 1px solid #4e4e4e;
+}
+
+#usr_price_column {
+	display: block;
+	height: 540px;
+	vertical-align: middle;
+}
+
+.usr_price_button{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+}
+
+.usr_price h2 {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	line-height: 40px;
+	color: #4e4e4e;
+}
+
+p.small {
+	font-size: 12px;
+	max-width: 90%;
+	margin: 10px auto;
+	text-align: center;
+}
+
+.light {
+	background-color: #eeeeee;
+	color: #4e4e4e;
+	height: auto;
+	min-height: 100px;
+	width: 100%;
+	padding: 30px 0;
+}
+
+.dark {
+	background-color: #4e4e4e;
+	color: #eeeeee;
+	height: auto;
+	min-height: 100px;
+	width: 100%;
+	padding: 30px 0;
+}
+
+.twocolumn {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.twocolumn tr td {
+	width: 50%;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.dark .twocolumn tr td:first-child {
+	border-right: 1px solid #aaaaaa;
+}
+
+p.home_p {
+	width: 420px;
+	height: auto;
+	margin: 10px auto;
+}
+
+.home_column img {
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 250px;
+	max-height: auto;
+}
+
+p.hidden_by_ad {
+	position: absolute;
+	left: 0;
+	right: 0;
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	float: center;
+	z-index: 2;
+}
+
+.center {
+	width: 60%;
+	min-width: 700px;
+	height: auto;
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+.jobsearch {
+	margin: 0 auto;
+	padding: 0 auto;
+	width: auto;
+}
+
+.jobsearch input {
+	display: inline-block;
+	background-color: #eeeeee;
+	color: #7e7e7e;
+	width: 80%;
+	height: 30px;
+	border: 2px solid #4e4e4e;
+	padding: 0 3px;
+}
+
+.jobsearch button {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	width: 17%;
+}
+
+.loginContainer {
+	margin: 0 auto;
+	padding: 0 auto;
+	width: 60%;
+	min-width: 600px;
+	height: auto;
+	min-height: 600px;
+}
+
+.loginContainer h4 {
+	margin-left: 50px;
+}
+
+.loginform {
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+.registerform {
+	margin: 0 auto;
+	padding: 0 auto;
+}
+
+.loginnav {
+	margin: 0 auto;
+	padding: 0 auto;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	
+}
+
+.loginContainer input[type=email], .loginContainer input[type=password], .loginContainer input[type=text] {
+	display: block;
+	width: 50%;
+	background-color: #eeeeee;
+    border: 2px solid #4e4e4e;
+	color: #7e7e7e;
+	height: 30px;
+	padding: 0 5px;
+	margin: 0 auto;
+}
+
+.loginContainer select {
+	display: block;
+	width: 50%;
+	background-color: #eeeeee;
+    border: 2px solid #4e4e4e;
+	color: #4e4e4e;
+	height: 30px;
+	margin: 0 auto;
+}
+
+.checkdiv {
+	display: block;
+	width: 50%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.loginContainer button {
 	display: block;
 	margin: 0 auto;
 }
 
-.blue a {
-	color: #92ABD8;
+.invisible {
+	display: none;
 }
 
-.blue a:hover {
-	color: lightgray;
+.visible {
+	display: block;
 }
 
-.fillheight {
-	height: 100%;
-	width: auto;
+.login_a {
+	display: inline-block;
+	border-bottom: 5px solid #aaaaaa;
+	transition: border-bottom 400ms;
+	text-decoration: none;
+	color: #4e4e4e;
+	width: 46%;
+	line-height: 30px;
+	text-align: center;
+	padding: 0;
+	margin: 0;
 }
 
-.fillwidth {
-	width: 100%;
-	height: auto;
+.login_a:hover {
+	border-bottom: 5px solid #4e4e4e;
 }
 
-.footer {
-	background-color: #111111;
-	color: gray;
-	width: 100%;
-	height: 50px;
-	font-size: 13px;
-}
-
-.footer a {
-	color: #92ABD8;
-}
-
-.footer a:hover {
-	color: lightgray;
+.login_selected {
+	border-bottom: 5px solid #92ABD8 !important;
+	transition: border-bottom 400ms;
 }
